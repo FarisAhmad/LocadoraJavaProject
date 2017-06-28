@@ -6,21 +6,23 @@ public class Produto {
 	protected int ano;
 	protected double precoPorDia;
 	protected double multaPorDia;
-	protected String situacao;
+	protected boolean situacao;
+	protected String observacao;
 	
 	
-	public Produto(int codigo, String titulo, int ano, double precoPorDia, double multaPorDia,String situacao) {
+	public Produto(int codigo, String titulo, int ano, double precoPorDia, double multaPorDia,boolean situacao,String observacao) {
 		this.codigo = codigo;
 		this.titulo = titulo;
 		this.ano = ano;
 		this.precoPorDia = precoPorDia;
 		this.multaPorDia = multaPorDia;
 		this.situacao = situacao;
+		this.observacao = observacao;
 	}
 	@Override
 	public String toString() {
 		return "\nProduto [codigo=" + codigo + ", titulo=" + titulo + ", ano=" + ano + ", precoPorDia=" + precoPorDia
-				+ ", multaPorDia=" + multaPorDia +", situacao="+ situacao+ "]\n";
+				+ ", multaPorDia=" + multaPorDia +", situacao="+ situacao +", observacao="+ observacao + "]\n";
 	}
 	public int getCodigo() {
 		return codigo;
@@ -52,12 +54,18 @@ public class Produto {
 	public void setMultaPorDia(double multaPorDia) {
 		this.multaPorDia = multaPorDia;
 	}
-
-	
-	public String getSituacao() {
+	public boolean isSituacao() {
 		return situacao;
 	}
-	public void setSituacao(String situacao) {
+	public void setSituacao(boolean situacao) {
 		this.situacao = situacao;
 	}
+	public String getObservacao() {
+		return observacao;
+	}
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+	
+
 }

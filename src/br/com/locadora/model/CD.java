@@ -5,10 +5,10 @@ public class CD extends Produto {
 	private String cantor;
 	private String genero;
 	
-	public CD(int codigo, String titulo, int ano, double precoPorDia, double multaPorDia, String gravadora,
-			String cantor, String genero,String situacao) {
+	public CD(int codigo, String titulo, int ano, double precoPorDia, double multaPorDia,boolean situacao,String observacao, String gravadora,
+			String cantor, String genero) {
 		
-		super(codigo, titulo, ano, precoPorDia, multaPorDia,situacao);
+		super(codigo, titulo, ano, precoPorDia, multaPorDia,situacao,observacao);
 		this.gravadora = gravadora;
 		this.cantor = cantor;
 		this.genero = genero;
@@ -17,7 +17,7 @@ public class CD extends Produto {
 	@Override
 	public String toString() {
 		return "\nCD [codigo=" + codigo + ", titulo=" + titulo + ", ano=" + ano + ", precoPorDia=" + precoPorDia
-				+ ", multaPorDia=" + multaPorDia +", situacao="+ situacao+", "+"gravadora=" + gravadora + ", cantor=" + cantor + ", genero=" + genero + "]\n";
+				+ ", multaPorDia=" + multaPorDia +", situacao="+ situacao+", observação="+observacao+", "+"gravadora=" + gravadora + ", cantor=" + cantor + ", genero=" + genero + "]\n";
 	}
 	
 	public String getGravadora() {

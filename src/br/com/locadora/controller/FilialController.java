@@ -39,7 +39,6 @@ public class FilialController {
 	}
 	
 	public Filial retornaFiliais(){
-		criaFiliais();
 		return filialAN;
 	}
 }
